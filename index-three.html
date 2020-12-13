@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Web Forms Part-III</title>
+  </head>
+  <body>
+
+    <h1>Pet Adoption Application</h1>
+
+      <form method="GET">
+
+        <!-- Applicant name -->
+        <label>Your name:
+          <input type="text" name="applicantName">
+        </label>
+
+        <!-- Applicant email -->
+        <label for="email">Your email:</label>
+        <input id="email" type="email" name="applicantEmail">
+
+        <!-- the other label for syntax -->
+        <label for="city">What city are you in?</label>
+        <input id="city" type="text" name="applicantCity">
+
+        <!-- Number of pets -->
+        <label>How many pets do you have in your home now?
+          <input type="number" name="petCount">
+        </label>
+
+        <!-- Adopt a new pet -->
+        <label>Why do you want to adopt a new pet?
+          <textarea name="name" rows="4" cols="50">Because I don't have enough cat hair on my sofa :(</textarea>
+        </label>
+
+        <!-- fieldset is a block element -->
+        <fieldset class="checkbox">
+
+          <legend>What types of animals are you intered in adopting?</legend>
+          <label>
+            <input type="checkbox" name="species" value="dog">Dog
+            <span class="checkmark"></span>
+          </label>
+
+          <label>
+            <input type="checkbox" name="species" value="cat">Cat
+            <span class="checkmark"></span>
+          </label>
+
+          <label>
+            <input type="checkbox" name="species" value="rabbit">Rabbit
+            <span class="checkmark"></span>
+          </label>
+
+          <label>
+            <input type="checkbox" name="species" value="snake">Snake
+            <span class="checkmark"></span>
+          </label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Are you interested in adopting special needs or elderly pets?</legend>
+          <label>
+            <input type="radio" name="special" value="yes">Yes
+          </label>
+
+          <label>
+            <input type="radio" name="special" value="no">No
+          </label>
+        </fieldset>
+
+
+        <label>How many hours a day is someone usually home to keep a pet company?
+          <select name="hours">
+            <option value="">Please select</option>
+            <option value="few">less than 10</option>
+            <option value="some">10 to 16</option>
+            <option value="many">more than 16</option>
+          </select>
+        </label>
+
+        <label for="password">To create account, enter a password</label>
+          <input id="password" type="password" name="accountPW">
+          <input type="submit" value="Apply Now!">
+
+      </form>
+
+  </body>
+</html>
