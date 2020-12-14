@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Web Forms Part-IV</title>
+    <style media="screen">
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: arial, sans-serif;
+      }
+
+      button, input, select, textarea {
+        font-family: inherit;
+        font-size: 100%;
+        box-sizing: border-box;
+        display: block;
+        margin: 1rem;
+      }
+
+      /* to style specific 'inputs' we can use attribute selectors*/
+      input[type=submit] {
+        width: 100%;
+        background-color: steelblue;
+      }
+
+      /* pseudoclass selectors */
+      input[type=password]:focus {
+        background-color: seagreen;
+        outline: none;
+      }
+
+      input {
+        border-radius: 15px;
+      }
+
+
+
+    </style>
+  </head>
+  <body>
+
+    <h1>Pet Adoption Application</h1>
+      <form method="GET">
+        <!-- Applicant name -->
+        <label>Your name:
+          <input type="text" name="applicantName">
+        </label>
+
+        <!-- Applicant email -->
+        <label for="email">Your email:</label>
+        <input id="email" type="email" name="applicantEmail">
+
+        <!-- the other label for syntax -->
+        <label for="city">What city are you in?</label>
+        <input id="city" type="text" name="applicantCity">
+
+        <!-- Number of pets -->
+        <label>How many pets do you have in your home now?
+          <input type="number" name="petCount">
+        </label>
+
+        <!-- Adopt a new pet -->
+        <label>Why do you want to adopt a new pet?
+          <textarea name="applicantReason" rows="4" cols="50">Because I don't have enough cat hair on my sofa :(</textarea>
+        </label>
+
+        <!-- fieldset is a block element -->
+        <fieldset class="checkbox">
+          <legend>What types of animals are you interested in adopting?</legend>
+          <label>Dogs
+            <input type="checkbox" name="species" value="dog">
+          </label>
+
+          <label>Cat
+            <input type="checkbox" name="species" value="cat">
+          </label>
+
+          <label>Iguanas
+            <input type="checkbox" name="species" value="iguanas">
+          </label>
+        </fieldset>
+
+        <fieldset>
+          <!-- legend is the same idea of paragraph tag -->
+          <legend>Are you interested in adopting special needs or elderly pets?</legend>
+
+          <label>
+            <input type="radio" name="special" value="yes">Yes
+          </label>
+
+          <label>
+            <input type="radio" name="special" value="no">No
+          </label>
+        </fieldset>
+
+        <!-- Dropdown menus -->
+        <label>How many hours a day is someone usually home to keep a pet company?
+          <select name="hours">
+            <!-- This option suggets to the user choose one action -->
+            <option value="">Please select</option>
+            <option value="few">less than 10</option>
+            <option value="some">10 to 16</option>
+            <option value="many">more than 16</option>
+          </select>
+        </label>
+
+        <label for="password">To create account, enter a password</label>
+          <input id="password" type="password" name="accountPW">
+          <input type="submit" value="Apply Now!">
+
+      </form>
+
+  </body>
+</html>
